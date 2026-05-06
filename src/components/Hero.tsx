@@ -31,30 +31,63 @@ export const Hero = () => {
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
         {/* Card reveal animation */}
-        <div className="relative mb-12 [perspective:1500px]">
-          {/* Box base */}
+        <div className="relative mb-12 [perspective:2200px]">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-[320px] md:w-[440px] h-[200px] md:h-[260px] rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/5"
+            initial={{ opacity: 0, scale: 0.86, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+            className="relative w-[320px] md:w-[440px] h-[200px] md:h-[260px] rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/5 [transform-style:preserve-3d]"
             style={{ boxShadow: "var(--shadow-card)" }}
           >
-            {/* Box ribbon */}
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-6 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-            <div className="absolute left-1/2 inset-y-0 -translate-x-1/2 w-6 bg-gradient-to-b from-transparent via-primary/40 to-transparent" />
+            <motion.div
+              initial={{ scaleY: 1 }}
+              animate={{ scaleY: 0 }}
+              transition={{ duration: 1.2, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              style={{ transformOrigin: "top center" }}
+              className="absolute left-1/2 inset-y-0 -translate-x-1/2 w-6 bg-gradient-to-b from-transparent via-primary/50 to-transparent"
+            />
+
+            {/* Lid opening */}
+            <motion.div
+              initial={{ rotateX: 0, opacity: 1 }}
+              animate={{ rotateX: -135, opacity: 0.85 }}
+              transition={{ duration: 2, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
+              style={{
+                transformOrigin: "top center",
+                transformStyle: "preserve-3d",
+                background: "linear-gradient(180deg, #1a1a1a 0%, #111 60%, #0a0a0a 100%)",
+                boxShadow: "0 12px 30px -10px hsl(0 0% 0% / 0.9), inset 0 1px 0 hsl(351 33% 70% / 0.15)",
+              }}
+              className="absolute inset-x-0 top-0 h-1/2 rounded-t-2xl border-b border-primary/20"
+            >
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-2 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            </motion.div>
 
             {/* Card pops out */}
             <motion.div
-              initial={{ y: 40, opacity: 0, rotateX: -25 }}
-              animate={{ y: -120, opacity: 1, rotateX: 0 }}
-              transition={{ duration: 1.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-6 top-6 bottom-6 rounded-xl glass flex flex-col items-center justify-center px-6 [transform-style:preserve-3d]"
+              initial={{ y: 0, opacity: 0, rotateX: -10, scale: 0.92 }}
+              animate={{ y: -150, opacity: 1, rotateX: 0, scale: 1 }}
+              transition={{ duration: 3, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-x-6 top-6 bottom-6 rounded-xl glass flex flex-col items-center justify-center px-6 overflow-hidden [transform-style:preserve-3d]"
               style={{
                 background: "linear-gradient(145deg, hsl(0 0% 12% / 0.95), hsl(351 20% 14% / 0.95))",
-                boxShadow: "var(--shadow-elegant), inset 0 1px 0 hsl(351 33% 70% / 0.15)",
+                boxShadow: "var(--shadow-elegant), inset 0 1px 0 hsl(351 33% 70% / 0.18)",
               }}
             >
+              {/* Glassmorphism light sweep */}
+              <motion.div
+                initial={{ x: "-130%" }}
+                animate={{ x: "130%" }}
+                transition={{ duration: 2.4, delay: 4.2, ease: [0.22, 1, 0.36, 1] }}
+                className="pointer-events-none absolute inset-y-0 w-2/3 -skew-x-12"
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent 0%, hsl(35 35% 93% / 0.06) 30%, hsl(351 33% 80% / 0.22) 50%, hsl(35 35% 93% / 0.06) 70%, transparent 100%)",
+                  filter: "blur(2px)",
+                }}
+              />
+
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] tracking-[0.3em] text-primary/70 uppercase font-light">
                 <span>HB+</span>
                 <span>Mother's Day</span>
@@ -68,11 +101,18 @@ export const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Glow under card */}
+          {/* Glow burst on open */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{ opacity: [0, 0.9, 0.5], scale: [0.6, 1.2, 1] }}
+            transition={{ duration: 2.4, delay: 1.8, ease: [0.22, 1, 0.36, 1], times: [0, 0.5, 1] }}
+            className="absolute top-1/4 left-1/2 -translate-x-1/2 w-2/3 h-20 bg-primary/40 blur-3xl pointer-events-none"
+          />
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
-            transition={{ duration: 2, delay: 1.2 }}
+            transition={{ duration: 2.4, delay: 3 }}
             className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-primary/30 blur-3xl"
           />
         </div>
