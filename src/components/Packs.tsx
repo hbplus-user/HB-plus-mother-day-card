@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Dumbbell, Flower2, Salad } from "lucide-react";
+import { Dumbbell, Flower2, Salad, HeartPulse } from "lucide-react";
 
 const packs = [
   {
-    name: "HB+ Wellness Pack",
+    name: "HB+ Wellness Experience",
     items: [
       { icon: Dumbbell, label: "4 Strength Sessions (35 mins)" },
       { icon: Flower2, label: "2 Yoga Sessions" },
@@ -11,7 +11,7 @@ const packs = [
     ],
   },
   {
-    name: "HB+ India Pack",
+    name: "HB+ India Experience",
     items: [
       { icon: Dumbbell, label: "4 Strength Sessions (35 mins)" },
       { icon: Flower2, label: "2 Yoga Sessions" },
@@ -19,10 +19,10 @@ const packs = [
     ],
   },
   {
-    name: "Hoppers Pack",
+    name: "Hoppers Experience",
     items: [
       { icon: Dumbbell, label: "4 Personal Strength Sessions (35 mins)" },
-      { icon: Salad, label: "1 Health Assessment" },
+      { icon: HeartPulse, label: "1 Health Assessment" },
     ],
   },
 ];
@@ -37,72 +37,90 @@ const Lotus = () => (
   </svg>
 );
 
+const Ornament = () => (
+  <div className="flex items-center justify-center gap-2 my-1">
+    <span className="h-px w-8 bg-primary/30" />
+    <span className="w-1 h-1 rounded-full bg-rose-gold-solid/70" />
+    <span className="h-px w-8 bg-primary/30" />
+  </div>
+);
+
 export const Packs = () => {
   return (
     <section className="relative py-24 md:py-32 px-6 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1 }}
-          className="text-center mb-14 md:mb-20"
+          className="text-center mb-10 md:mb-14"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="h-px w-10 bg-primary/40" />
-            <span className="w-1 h-1 rounded-full bg-rose-gold-solid" />
-            <span className="h-px w-10 bg-primary/40" />
-          </div>
-          <h2 className="text-xs md:text-sm tracking-[0.5em] text-cream uppercase font-light">
-            Wellness Combo Packs
+          <Ornament />
+          <h2 className="text-xs md:text-sm tracking-[0.5em] text-cream uppercase font-light mt-4">
+            Wellness Combo Pack
           </h2>
-          <p className="mt-6 max-w-xl mx-auto font-serif italic text-muted-foreground text-lg leading-relaxed">
+          <p className="mt-6 max-w-xl mx-auto font-serif italic text-muted-foreground text-base md:text-lg leading-relaxed">
             Thoughtfully crafted sessions and expert guidance
             <br className="hidden md:block" />
             to help her move better, feel better, live better.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
-          {packs.map((pack, i) => (
-            <motion.div
-              key={pack.name}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.9, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative glass glass-hover rounded-2xl p-8 flex flex-col items-center text-center"
-            >
-              {/* Lotus icon in rose gold circle */}
-              <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/10 border border-primary/30 text-primary mb-6">
-                <Lotus />
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="relative glass rounded-3xl p-8 md:p-12 overflow-hidden"
+        >
+          {/* Lotus header */}
+          <div className="flex flex-col items-center text-center mb-2">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/10 border border-primary/30 text-primary mb-4">
+              <Lotus />
+            </div>
+          </div>
 
-              <h3 className="text-[11px] tracking-[0.4em] uppercase text-cream font-light leading-relaxed">
-                {pack.name.split(" ").slice(0, -1).join(" ")}
-                <br />
-                <span className="text-primary">{pack.name.split(" ").slice(-1)}</span>
-              </h3>
+          <div className="divide-y divide-border/40">
+            {packs.map((pack, i) => (
+              <motion.div
+                key={pack.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.15 + i * 0.12 }}
+                className="py-7 first:pt-2"
+              >
+                <div className="text-center mb-5">
+                  <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground font-light">HB+</p>
+                  <h3 className="mt-1 text-[13px] md:text-sm tracking-[0.4em] uppercase text-cream font-light">
+                    <span className="text-primary">{pack.name.replace("HB+ ", "")}</span>
+                  </h3>
+                  <Ornament />
+                </div>
 
-              <div className="my-6 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                <ul className="space-y-3 max-w-sm mx-auto">
+                  {pack.items.map(({ icon: Icon, label }) => (
+                    <li key={label} className="flex items-center gap-3">
+                      <div className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center bg-primary/5 border border-primary/20 text-primary/80">
+                        <Icon className="w-4 h-4" strokeWidth={1.2} />
+                      </div>
+                      <span className="text-sm text-muted-foreground font-light leading-snug">
+                        {label}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
 
-              <ul className="space-y-4 w-full">
-                {pack.items.map(({ icon: Icon, label }) => (
-                  <li key={label} className="flex items-center gap-3 text-left">
-                    <div className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center bg-primary/5 border border-primary/20 text-primary/80">
-                      <Icon className="w-4 h-4" strokeWidth={1.2} />
-                    </div>
-                    <span className="text-sm text-muted-foreground font-light leading-snug">
-                      {label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+          <p className="mt-8 text-center font-serif italic text-xs md:text-sm text-muted-foreground/80">
+            Offer inclusions may vary slightly based on membership type.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
