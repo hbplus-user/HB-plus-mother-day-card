@@ -104,27 +104,27 @@
 
   .btn-luxe {
     position: relative;
-    background: var(--gradient-rose-gold);
-    color: hsl(var(--cream));
+    background: hsl(var(--cream));
+    color: hsl(30 25% 22%);
     transition: all 0.5s var(--transition-luxe);
-    box-shadow: 0 10px 40px -10px hsl(351 33% 57% / 0.5);
+    box-shadow: 0 10px 40px -10px hsl(28 30% 25% / 0.35);
   }
   .btn-luxe::before {
     content: '';
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: var(--gradient-rose-gold);
+    background: hsl(var(--cream));
     filter: blur(20px);
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: -1;
     transition: opacity 0.5s var(--transition-luxe);
   }
   .btn-luxe:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 20px 60px -10px hsl(351 33% 57% / 0.7);
+    box-shadow: 0 20px 60px -10px hsl(28 30% 20% / 0.45);
   }
-  .btn-luxe:hover::before { opacity: 1; }
+  .btn-luxe:hover::before { opacity: 0.6; }
 
   .particle {
     position: absolute;
