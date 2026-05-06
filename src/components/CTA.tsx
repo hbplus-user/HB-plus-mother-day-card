@@ -1,46 +1,55 @@
 import { motion } from "framer-motion";
-import { Gift, Heart } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { FloralOrnament } from "./FloralOrnament";
 
 export const CTA = () => {
   return (
-    <section className="relative py-16 md:py-24 px-6 overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/15 blur-[120px] rounded-full animate-pulse-glow pointer-events-none" />
+    <section className="relative py-32 px-6 overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-[700px] h-[700px] rounded-full bg-primary/10 blur-[140px] animate-pulse-glow" />
+      </div>
 
-      <div className="relative max-w-2xl mx-auto text-center flex flex-col items-center">
-        <motion.a
-          href="https://wa.me/91XXXXXXXXXX"
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 20 }}
+      <div className="absolute top-10 left-10 w-32 text-primary/15 hidden md:block">
+        <FloralOrnament />
+      </div>
+      <div className="absolute bottom-10 right-10 w-32 text-secondary/15 rotate-180 hidden md:block">
+        <FloralOrnament />
+      </div>
+
+      <div className="relative max-w-3xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-          className="btn-luxe inline-flex items-center justify-center gap-3 px-12 md:px-16 py-5 rounded-full font-serif text-2xl tracking-[0.3em] uppercase w-full max-w-md"
         >
-          <Gift className="w-5 h-5" strokeWidth={1.5} />
-          <span>Gift Wellness</span>
-        </motion.a>
+          <span className="text-xs tracking-[0.4em] uppercase text-primary/70 font-light">
+            Begin the Gift
+          </span>
+          <h2 className="font-serif text-4xl md:text-6xl mt-5 leading-tight">
+            <span className="text-foreground/90">Because she gave you </span>
+            <span className="italic text-rose-gold">everything</span>
+            <span className="text-foreground/90">.</span>
+          </h2>
+          <p className="mt-6 text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
+            Speak with our wellness concierge to curate the perfect gift, personally and with care.
+          </p>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="mt-6 font-serif italic text-muted-foreground text-base"
-        >
-          Celebrate her. Support her. Strengthen her.
-        </motion.p>
+          <motion.a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="btn-luxe inline-flex items-center gap-3 mt-12 px-12 py-5 rounded-full font-serif text-xl tracking-wide"
+          >
+            <span>Gift Wellness</span>
+            <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
+          </motion.a>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-6"
-        >
-          <Heart className="w-4 h-4 text-rose-gold-solid fill-rose-gold-solid/40" strokeWidth={1.5} />
+          <p className="mt-8 text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 font-light">
+            Continues on WhatsApp · Personal Concierge
+          </p>
         </motion.div>
       </div>
     </section>
