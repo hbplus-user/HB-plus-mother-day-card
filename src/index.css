@@ -1,105 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Matte Black: #0F0F0F */
+    --background: 0 0% 6%;
+    --foreground: 35 35% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 35 35% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 35 35% 93%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rose Gold #B76E79 */
+    --primary: 351 33% 57%;
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted Rose #D9A5A5 */
+    --secondary: 0 44% 75%;
+    --secondary-foreground: 0 0% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 30 15% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 351 33% 57%;
+    --accent-foreground: 35 35% 93%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 35 35% 93%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 351 33% 57%;
 
-    --radius: 0.5rem;
+    /* Soft cream */
+    --cream: 35 35% 93%;
+    --rose: 0 44% 75%;
+    --rose-gold: 351 33% 57%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 1rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-bg: radial-gradient(ellipse at top, hsl(351 30% 12% / 0.6), transparent 50%), radial-gradient(ellipse at bottom, hsl(0 25% 14% / 0.4), transparent 60%), hsl(0 0% 6%);
+    --gradient-rose-gold: linear-gradient(135deg, hsl(351 40% 65%), hsl(351 33% 47%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.06), hsl(0 0% 100% / 0.02));
+    --gradient-text: linear-gradient(135deg, hsl(35 35% 93%), hsl(351 33% 70%));
+    --gradient-glow: radial-gradient(circle, hsl(351 33% 57% / 0.4), transparent 70%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-elegant: 0 25px 80px -20px hsl(351 33% 30% / 0.5);
+    --shadow-glow: 0 0 60px hsl(351 33% 57% / 0.4);
+    --shadow-card: 0 30px 60px -30px hsl(0 0% 0% / 0.8);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --transition-luxe: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-bg);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .font-serif { font-family: 'Cormorant Garamond', serif; }
+}
+
+@layer components {
+  .glass {
+    background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.08);
+  }
+
+  .glass-hover {
+    transition: all 0.6s var(--transition-luxe);
+  }
+  .glass-hover:hover {
+    border-color: hsl(351 33% 57% / 0.4);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-rose-gold {
+    background: var(--gradient-rose-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-luxe {
+    position: relative;
+    background: var(--gradient-rose-gold);
+    color: hsl(var(--cream));
+    transition: all 0.5s var(--transition-luxe);
+    box-shadow: 0 10px 40px -10px hsl(351 33% 57% / 0.5);
+  }
+  .btn-luxe::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--gradient-rose-gold);
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1;
+    transition: opacity 0.5s var(--transition-luxe);
+  }
+  .btn-luxe:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 20px 60px -10px hsl(351 33% 57% / 0.7);
+  }
+  .btn-luxe:hover::before { opacity: 1; }
+
+  .particle {
+    position: absolute;
+    border-radius: 9999px;
+    background: hsl(351 33% 70% / 0.5);
+    pointer-events: none;
+    filter: blur(1px);
+  }
+}
+
+@layer utilities {
+  .ambient-light::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--gradient-glow);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
   }
 }
