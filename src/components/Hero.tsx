@@ -1,101 +1,165 @@
 import { motion } from "framer-motion";
 import { Particles } from "./Particles";
 import { FloralOrnament } from "./FloralOrnament";
+import { ArrowUpRight } from "lucide-react";
+import heroWoman from "@/assets/hero-woman.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-32 pb-24">
+    <section className="relative min-h-screen flex items-center overflow-hidden px-6 md:px-12 pt-32 pb-24">
       {/* Ambient lights */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-secondary/5 blur-[140px] animate-pulse-glow" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/3 -left-20 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[140px] animate-pulse-glow" />
+      <div className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] rounded-full bg-secondary/[0.06] blur-[160px] animate-pulse-glow" style={{ animationDelay: "2.5s" }} />
 
-      <Particles count={28} />
+      {/* Grain */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>\")",
+        }}
+      />
+
+      <Particles count={32} />
 
       {/* Parallax floral ornaments */}
       <motion.div
-        className="absolute top-10 left-4 md:left-16 w-40 md:w-56 text-primary/30"
+        className="absolute top-24 left-2 md:left-12 w-32 md:w-44 text-primary/20 hidden sm:block"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.6, delay: 0.4 }}
+        transition={{ duration: 2, delay: 0.6 }}
       >
         <FloralOrnament />
       </motion.div>
       <motion.div
-        className="absolute bottom-10 right-4 md:right-16 w-40 md:w-56 text-secondary/30 rotate-180"
+        className="absolute bottom-16 right-2 md:right-12 w-32 md:w-44 text-secondary/20 rotate-180 hidden sm:block"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.6, delay: 0.6 }}
+        transition={{ duration: 2, delay: 0.9 }}
       >
         <FloralOrnament />
       </motion.div>
 
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
-        {/* Card reveal animation */}
-        <div className="relative mb-12 [perspective:1500px]">
-          {/* Box base */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-[320px] md:w-[440px] h-[200px] md:h-[260px] rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/5"
-            style={{ boxShadow: "var(--shadow-card)" }}
+      <div className="relative z-10 mx-auto max-w-7xl w-full grid lg:grid-cols-12 gap-16 items-center">
+        {/* Text + invitation */}
+        <div className="lg:col-span-7 flex flex-col">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="text-[10px] md:text-xs tracking-[0.5em] uppercase text-primary/70 font-light"
           >
-            {/* Box ribbon */}
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-6 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-            <div className="absolute left-1/2 inset-y-0 -translate-x-1/2 w-6 bg-gradient-to-b from-transparent via-primary/40 to-transparent" />
+            HB+ · Mother's Day Edition
+          </motion.span>
 
-            {/* Card pops out */}
-            <motion.div
-              initial={{ y: 40, opacity: 0, rotateX: -25 }}
-              animate={{ y: -120, opacity: 1, rotateX: 0 }}
-              transition={{ duration: 1.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-6 top-6 bottom-6 rounded-xl glass flex flex-col items-center justify-center px-6 [transform-style:preserve-3d]"
-              style={{
-                background: "linear-gradient(145deg, hsl(0 0% 12% / 0.95), hsl(351 20% 14% / 0.95))",
-                boxShadow: "var(--shadow-elegant), inset 0 1px 0 hsl(351 33% 70% / 0.15)",
-              }}
-            >
-              <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] tracking-[0.3em] text-primary/70 uppercase font-light">
-                <span>HB+</span>
-                <span>Mother's Day</span>
-              </div>
-              <p className="font-serif text-2xl md:text-4xl leading-tight text-cream-foreground">
-                <span className="block text-foreground/90">This Mother's Day,</span>
-                <span className="block italic text-rose-gold">Gift Her</span>
-                <span className="block text-foreground/90">the Best You Can.</span>
-              </p>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-            </motion.div>
-          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="font-serif text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] mt-8 tracking-tight"
+          >
+            <span className="block text-foreground/95">This Mother's Day,</span>
+            <span className="block text-foreground/85">give her something</span>
+            <span className="block italic text-rose-gold">that finally pours</span>
+            <span className="block italic text-rose-gold">back into her.</span>
+          </motion.h1>
 
-          {/* Glow under card */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.4, delay: 1.1 }}
+            className="mt-10 max-w-lg text-base md:text-lg text-muted-foreground font-light leading-[1.8]"
+          >
+            A thoughtfully curated wellness experience designed to help her feel
+            lighter, stronger, calmer, and cared for.
+          </motion.p>
+
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            transition={{ duration: 2, delay: 1.2 }}
-            className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-primary/30 blur-3xl"
-          />
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.4, delay: 1.4 }}
+            className="mt-12 flex items-center gap-6"
+          >
+            <a
+              href="https://wa.me/91XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-luxe inline-flex items-center gap-3 px-9 py-4 rounded-full font-serif text-lg tracking-wide"
+            >
+              <span>Gift Wellness</span>
+              <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} />
+            </a>
+            <span className="hidden sm:inline-flex items-center gap-3 text-[11px] tracking-[0.35em] uppercase text-muted-foreground/70 font-light">
+              <span className="h-px w-8 bg-primary/40" />
+              Opens on WhatsApp
+            </span>
+          </motion.div>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.4 }}
-          className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-24 md:mt-32"
-        >
-          A wellness experience made just for her.
-        </motion.p>
+        {/* Envelope + card reveal */}
+        <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end">
+          <div className="relative [perspective:1800px] w-full max-w-md">
+            {/* Glow */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 3, delay: 1.5 }}
+              className="absolute -inset-12 bg-primary/20 blur-[100px] rounded-full"
+            />
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2.8 }}
-          className="mt-8 flex items-center gap-3 text-xs tracking-[0.4em] text-primary/70 uppercase font-light"
-        >
-          <span className="h-px w-8 bg-primary/40" />
-          <span>Scroll to explore</span>
-          <span className="h-px w-8 bg-primary/40" />
-        </motion.div>
+            {/* Portrait card */}
+            <motion.div
+              initial={{ opacity: 0, y: 80, rotateX: -18, scale: 0.92 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+              transition={{ duration: 2.4, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative rounded-[28px] overflow-hidden [transform-style:preserve-3d]"
+              style={{
+                boxShadow:
+                  "var(--shadow-elegant), 0 0 0 1px hsl(351 33% 70% / 0.18), inset 0 1px 0 hsl(351 33% 80% / 0.2)",
+              }}
+            >
+              <div className="absolute inset-0 rounded-[28px] pointer-events-none z-10"
+                   style={{ boxShadow: "inset 0 0 0 1px hsl(351 33% 65% / 0.25)" }} />
+              <img
+                src={heroWoman}
+                alt="Serene portrait of a woman wrapped in cashmere"
+                width={1024}
+                height={1024}
+                className="w-full h-auto object-cover aspect-[4/5]"
+              />
+              {/* Vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/20" />
+
+              {/* Header text */}
+              <div className="absolute top-5 inset-x-5 flex items-center justify-between text-[10px] tracking-[0.4em] uppercase text-cream/80 font-light z-20">
+                <span>HB+</span>
+                <span>An Invitation</span>
+              </div>
+
+              {/* Footer text */}
+              <div className="absolute bottom-6 inset-x-6 z-20">
+                <div className="h-px w-10 bg-rose-gold/70 mb-4" />
+                <p className="font-serif italic text-cream text-lg md:text-xl leading-snug">
+                  For the woman who gave us everything.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Wax seal */}
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute -bottom-6 -left-6 md:-left-10 w-20 h-20 rounded-full flex items-center justify-center font-serif text-cream text-xl"
+              style={{
+                background: "var(--gradient-rose-gold)",
+                boxShadow: "0 12px 40px -8px hsl(351 33% 30% / 0.7), inset 0 2px 0 hsl(351 33% 80% / 0.4)",
+              }}
+            >
+              <span className="italic">H+</span>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
