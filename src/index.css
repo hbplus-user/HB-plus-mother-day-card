@@ -128,7 +128,7 @@
   .particle {
     position: absolute;
     border-radius: 9999px;
-    background: hsl(35 40% 95% / 0.45);
+    background: hsl(351 33% 70% / 0.5);
     pointer-events: none;
     filter: blur(1px);
   }
