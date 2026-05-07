@@ -24,15 +24,15 @@ export const CTA = () => {
           transition={{ duration: 1 }}
         >
           <span className="text-xs tracking-[0.4em] uppercase text-primary/70 font-light">
-            Begin the Gift
+            {"\u200B"}
           </span>
           <h2 className="font-serif text-4xl md:text-6xl mt-5 leading-tight">
-            <span className="text-foreground/90">Because she gave you </span>
-            <span className="italic text-rose-gold">everything</span>
-            <span className="text-foreground/90">.</span>
+            <span className="text-foreground/90 text-4xl font-extralight">Thoughtfully designed sessions to help her reconnect with herself.</span>
+            <span className="italic text-rose-gold">{"\u200B"}</span>
+            <span className="text-foreground/90 text-4xl font-extralight">.</span>
           </h2>
           <p className="mt-6 text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
-            Speak with our wellness concierge to curate the perfect gift, personally and with care.
+            Gift The HB+ Experience
           </p>
 
           <motion.a
