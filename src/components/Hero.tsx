@@ -147,7 +147,7 @@ export const Hero = () => {
                     Gift
                   </motion.span>
                   <motion.span
-                    className="block text-base md:text-xl font-light tracking-wide mt-1"
+                    className="block md:text-xl font-light tracking-wide mt-1 text-2xl"
                     style={{ color: "rgba(243,224,191,0.85)" }}
                     initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
