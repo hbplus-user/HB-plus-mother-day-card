@@ -4,7 +4,7 @@ import { FloralOrnament } from "./FloralOrnament";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-32 pb-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-48 md:pt-56 pb-24">
       {/* Ambient lights */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px] animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-secondary/5 blur-[140px] animate-pulse-glow" style={{ animationDelay: "2s" }} />
@@ -67,9 +67,9 @@ export const Hero = () => {
             {/* Card pops out */}
             <motion.div
               initial={{ y: 0, opacity: 0, rotateX: -10, scale: 0.92 }}
-              animate={{ y: -150, opacity: 1, rotateX: 0, scale: 1 }}
+              animate={{ y: -180, opacity: 1, rotateX: 0, scale: 1 }}
               transition={{ duration: 3, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-6 top-6 bottom-6 rounded-xl glass flex flex-col items-center justify-center px-6 overflow-hidden [transform-style:preserve-3d]"
+              className="absolute inset-x-6 top-6 bottom-6 rounded-xl glass flex flex-col items-center justify-center px-6 overflow-hidden [transform-style:preserve-3d] z-30"
               style={{
                 background: "linear-gradient(145deg, hsl(0 0% 12% / 0.95), hsl(351 20% 14% / 0.95))",
                 boxShadow: "var(--shadow-elegant), inset 0 1px 0 hsl(351 33% 70% / 0.18)",
