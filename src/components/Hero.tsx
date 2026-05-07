@@ -144,7 +144,7 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 1.4, delay: 3.9, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    Gift Her
+                    Gift
                   </motion.span>
                   <motion.span
                     className="block text-base md:text-xl font-light tracking-wide mt-1"
@@ -153,7 +153,7 @@ export const Hero = () => {
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 1.4, delay: 4.6, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    Energy & Strength
+                    Wellness
                   </motion.span>
                 </p>
               </div>
