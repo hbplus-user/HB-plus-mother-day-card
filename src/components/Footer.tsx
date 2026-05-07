@@ -2,9 +2,9 @@ import { Instagram, Youtube, Linkedin } from "lucide-react";
 import hbLogo from "@/assets/hb-logo.png";
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/hbplus.in/", label: "Instagram" },
-  { icon: Youtube, href: "https://www.youtube.com/@hbplus", label: "YouTube" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/hbplus/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/hopwith_hb/", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@hbplusofficial", label: "YouTube" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/hbplus/?originalSubdomain=in", label: "LinkedIn" },
 ];
 
 export const Footer = () => (
