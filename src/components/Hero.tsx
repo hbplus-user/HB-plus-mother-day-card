@@ -116,17 +116,6 @@ export const Hero = () => {
                   className="h-5 md:h-6 w-auto object-contain opacity-90"
                   style={{ filter: "brightness(0) invert(1) drop-shadow(0 1px 0 rgba(0,0,0,0.5))" }}
                 />
-                <span
-                  className="text-[8px] md:text-[9px] tracking-[0.35em] uppercase font-light"
-                  style={{
-                    background: "linear-gradient(180deg, #f3e0bf 0%, #b8895a 100%)",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  Reserve
-                </span>
               </div>
 
               {/* center embossed text */}
@@ -169,28 +158,6 @@ export const Hero = () => {
                 </p>
               </div>
 
-              {/* bottom row: chip-style detail + member */}
-              <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between z-10">
-                <div
-                  className="h-5 w-7 md:h-6 md:w-9 rounded-[3px] border border-white/20"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #d4b274 0%, #8a6432 50%, #d4b274 100%)",
-                    boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)",
-                  }}
-                />
-                <div className="text-right">
-                  <div className="text-[7px] md:text-[8px] tracking-[0.3em] uppercase text-white/40 font-light">
-                    Member Since
-                  </div>
-                  <div
-                    className="text-[10px] md:text-xs tracking-[0.25em] font-light"
-                    style={{ color: "rgba(243,224,191,0.8)" }}
-                  >
-                    05 / 26
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
 
