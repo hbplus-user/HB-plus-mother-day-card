@@ -6,55 +6,65 @@
 
 @layer base {
   :root {
-    /* Matte Black: #0F0F0F */
-    --background: 0 0% 6%;
-    --foreground: 35 35% 93%;
+    /* HB+ Palette
+       Grayscale: #c6c6c6, #f5f2e9, #1a1a1a
+       Primary:   #9f4022 (rust), #747440 (olive), #53372b (deep brown),
+                  #ede0d0 (cream), #a9674d (clay)
+    */
 
-    --card: 0 0% 8%;
-    --card-foreground: 35 35% 93%;
+    /* Base — deep brown #1a1a1a */
+    --background: 0 0% 10%;
+    --foreground: 32 41% 87%;       /* cream #ede0d0 */
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 35 35% 93%;
+    --card: 19 32% 14%;             /* darker brown derived from #53372b */
+    --card-foreground: 32 41% 87%;
 
-    /* Rose Gold #B76E79 */
-    --primary: 351 33% 57%;
-    --primary-foreground: 0 0% 6%;
+    --popover: 19 32% 14%;
+    --popover-foreground: 32 41% 87%;
 
-    /* Muted Rose #D9A5A5 */
-    --secondary: 0 44% 75%;
-    --secondary-foreground: 0 0% 6%;
+    /* Primary — Rust #9f4022 */
+    --primary: 14 64% 38%;
+    --primary-foreground: 32 41% 87%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 30 15% 70%;
+    /* Secondary — Clay #a9674d */
+    --secondary: 17 39% 48%;
+    --secondary-foreground: 0 0% 10%;
 
-    --accent: 351 33% 57%;
-    --accent-foreground: 35 35% 93%;
+    --muted: 19 20% 16%;
+    --muted-foreground: 32 18% 70%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 35 35% 93%;
+    /* Accent — Olive #747440 */
+    --accent: 60 29% 35%;
+    --accent-foreground: 32 41% 87%;
 
-    --border: 30 10% 18%;
-    --input: 30 10% 18%;
-    --ring: 351 33% 57%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 32 41% 87%;
 
-    /* Soft cream */
-    --cream: 35 35% 93%;
-    --rose: 0 44% 75%;
-    --rose-gold: 351 33% 57%;
+    --border: 19 20% 20%;
+    --input: 19 20% 20%;
+    --ring: 14 64% 38%;
+
+    /* Brand tokens (kept names for backward compatibility) */
+    --cream: 32 41% 87%;            /* #ede0d0 */
+    --cream-soft: 42 33% 94%;       /* #f5f2e9 */
+    --rose: 17 39% 48%;             /* clay  */
+    --rose-gold: 14 64% 38%;        /* rust  */
+    --olive: 60 29% 35%;
+    --deep-brown: 19 32% 25%;
 
     --radius: 1rem;
 
     /* Gradients */
-    --gradient-bg: radial-gradient(ellipse at top, hsl(351 30% 12% / 0.6), transparent 50%), radial-gradient(ellipse at bottom, hsl(0 25% 14% / 0.4), transparent 60%), hsl(0 0% 6%);
-    --gradient-rose-gold: linear-gradient(135deg, hsl(351 40% 65%), hsl(351 33% 47%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.06), hsl(0 0% 100% / 0.02));
-    --gradient-text: linear-gradient(135deg, hsl(35 35% 93%), hsl(351 33% 70%));
-    --gradient-glow: radial-gradient(circle, hsl(351 33% 57% / 0.4), transparent 70%);
+    --gradient-bg: radial-gradient(ellipse at top, hsl(14 50% 14% / 0.55), transparent 50%), radial-gradient(ellipse at bottom, hsl(19 32% 14% / 0.5), transparent 60%), hsl(0 0% 10%);
+    --gradient-rose-gold: linear-gradient(135deg, hsl(17 55% 55%), hsl(14 64% 38%));
+    --gradient-card: linear-gradient(145deg, hsl(32 41% 87% / 0.06), hsl(32 41% 87% / 0.02));
+    --gradient-text: linear-gradient(135deg, hsl(32 41% 87%), hsl(17 55% 60%));
+    --gradient-glow: radial-gradient(circle, hsl(14 64% 38% / 0.4), transparent 70%);
 
     /* Shadows */
-    --shadow-elegant: 0 25px 80px -20px hsl(351 33% 30% / 0.5);
-    --shadow-glow: 0 0 60px hsl(351 33% 57% / 0.4);
-    --shadow-card: 0 30px 60px -30px hsl(0 0% 0% / 0.8);
+    --shadow-elegant: 0 25px 80px -20px hsl(14 64% 20% / 0.6);
+    --shadow-glow: 0 0 60px hsl(14 64% 38% / 0.45);
+    --shadow-card: 0 30px 60px -30px hsl(0 0% 0% / 0.85);
 
     --transition-luxe: cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -85,7 +95,7 @@
     transition: all 0.6s var(--transition-luxe);
   }
   .glass-hover:hover {
-    border-color: hsl(351 33% 57% / 0.4);
+    border-color: hsl(14 64% 38% / 0.4);
     transform: translateY(-6px);
     box-shadow: var(--shadow-elegant);
   }
@@ -109,7 +119,7 @@
     background: var(--gradient-rose-gold);
     color: hsl(var(--cream));
     transition: all 0.5s var(--transition-luxe);
-    box-shadow: 0 10px 40px -10px hsl(351 33% 57% / 0.5);
+    box-shadow: 0 10px 40px -10px hsl(14 64% 38% / 0.5);
   }
   .btn-luxe::before {
     content: '';
@@ -124,14 +134,14 @@
   }
   .btn-luxe:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 20px 60px -10px hsl(351 33% 57% / 0.7);
+    box-shadow: 0 20px 60px -10px hsl(14 64% 38% / 0.7);
   }
   .btn-luxe:hover::before { opacity: 1; }
 
   .particle {
     position: absolute;
     border-radius: 9999px;
-    background: hsl(351 33% 70% / 0.5);
+    background: hsl(17 55% 65% / 0.5);
     pointer-events: none;
     filter: blur(1px);
   }
