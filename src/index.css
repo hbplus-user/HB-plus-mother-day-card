@@ -7,63 +7,61 @@
 @layer base {
   :root {
     /* HB+ Palette
-       Grayscale: #c6c6c6, #f5f2e9, #1a1a1a
-       Primary:   #9f4022 (rust), #747440 (olive), #53372b (deep brown),
-                  #ede0d0 (cream), #a9674d (clay)
+       #f5f2e9 (cream), #1a1a1a (ink), #c6c6c6 (silver)
     */
 
-    /* Base — deep brown #1a1a1a */
+    /* Base — ink #1a1a1a */
     --background: 0 0% 10%;
-    --foreground: 32 41% 87%;       /* cream #ede0d0 */
+    --foreground: 42 33% 94%;       /* cream #f5f2e9 */
 
-    --card: 19 32% 14%;             /* darker brown derived from #53372b */
-    --card-foreground: 32 41% 87%;
+    --card: 0 0% 12%;
+    --card-foreground: 42 33% 94%;
 
-    --popover: 19 32% 14%;
-    --popover-foreground: 32 41% 87%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 42 33% 94%;
 
-    /* Primary — Rust #9f4022 */
-    --primary: 14 64% 38%;
-    --primary-foreground: 32 41% 87%;
+    /* Primary — cream */
+    --primary: 42 33% 94%;
+    --primary-foreground: 0 0% 10%;
 
-    /* Secondary — Clay #a9674d */
-    --secondary: 17 39% 48%;
+    /* Secondary — silver */
+    --secondary: 0 0% 78%;
     --secondary-foreground: 0 0% 10%;
 
-    --muted: 19 20% 16%;
-    --muted-foreground: 32 18% 70%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 78%;
 
-    /* Accent — Olive #747440 */
-    --accent: 60 29% 35%;
-    --accent-foreground: 32 41% 87%;
+    /* Accent — silver */
+    --accent: 0 0% 78%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 70% 45%;
-    --destructive-foreground: 32 41% 87%;
+    --destructive-foreground: 42 33% 94%;
 
-    --border: 19 20% 20%;
-    --input: 19 20% 20%;
-    --ring: 14 64% 38%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 42 33% 94%;
 
     /* Brand tokens (kept names for backward compatibility) */
-    --cream: 32 41% 87%;            /* #ede0d0 */
-    --cream-soft: 42 33% 94%;       /* #f5f2e9 */
-    --rose: 17 39% 48%;             /* clay  */
-    --rose-gold: 14 64% 38%;        /* rust  */
-    --olive: 60 29% 35%;
-    --deep-brown: 19 32% 25%;
+    --cream: 42 33% 94%;            /* #f5f2e9 */
+    --cream-soft: 42 33% 94%;
+    --rose: 0 0% 78%;               /* silver */
+    --rose-gold: 42 33% 94%;        /* cream */
+    --olive: 0 0% 78%;
+    --deep-brown: 0 0% 10%;
 
     --radius: 1rem;
 
     /* Gradients */
-    --gradient-bg: radial-gradient(ellipse at top, hsl(14 50% 14% / 0.55), transparent 50%), radial-gradient(ellipse at bottom, hsl(19 32% 14% / 0.5), transparent 60%), hsl(0 0% 10%);
-    --gradient-rose-gold: linear-gradient(135deg, hsl(17 55% 55%), hsl(14 64% 38%));
-    --gradient-card: linear-gradient(145deg, hsl(32 41% 87% / 0.06), hsl(32 41% 87% / 0.02));
-    --gradient-text: linear-gradient(135deg, hsl(32 41% 87%), hsl(17 55% 60%));
-    --gradient-glow: radial-gradient(circle, hsl(14 64% 38% / 0.4), transparent 70%);
+    --gradient-bg: radial-gradient(ellipse at top, hsl(0 0% 14% / 0.7), transparent 55%), radial-gradient(ellipse at bottom, hsl(0 0% 8% / 0.6), transparent 60%), hsl(0 0% 10%);
+    --gradient-rose-gold: linear-gradient(135deg, hsl(42 33% 94%), hsl(0 0% 78%));
+    --gradient-card: linear-gradient(145deg, hsl(42 33% 94% / 0.06), hsl(42 33% 94% / 0.02));
+    --gradient-text: linear-gradient(135deg, hsl(42 33% 94%), hsl(0 0% 78%));
+    --gradient-glow: radial-gradient(circle, hsl(42 33% 94% / 0.18), transparent 70%);
 
     /* Shadows */
-    --shadow-elegant: 0 25px 80px -20px hsl(14 64% 20% / 0.6);
-    --shadow-glow: 0 0 60px hsl(14 64% 38% / 0.45);
+    --shadow-elegant: 0 25px 80px -20px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 60px hsl(42 33% 94% / 0.18);
     --shadow-card: 0 30px 60px -30px hsl(0 0% 0% / 0.85);
 
     --transition-luxe: cubic-bezier(0.22, 1, 0.36, 1);
