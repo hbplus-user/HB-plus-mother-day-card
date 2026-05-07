@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Particles } from "./Particles";
 import { FloralOrnament } from "./FloralOrnament";
+import hbLogo from "@/assets/hb-logo.png";
 
 export const Hero = () => {
   return (
@@ -64,18 +65,37 @@ export const Hero = () => {
               <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-2 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
             </motion.div>
 
-            {/* Card pops out */}
+            {/* Card pops out — premium metal card */}
             <motion.div
               initial={{ y: 0, opacity: 0, rotateX: -10, scale: 0.92 }}
               animate={{ y: -180, opacity: 1, rotateX: 0, scale: 1 }}
               transition={{ duration: 3, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-6 top-6 bottom-6 rounded-xl glass flex flex-col items-center justify-center px-6 overflow-hidden [transform-style:preserve-3d] z-30"
+              className="absolute inset-x-6 top-6 bottom-6 rounded-xl overflow-hidden [transform-style:preserve-3d] z-30 border border-white/10"
               style={{
-                background: "linear-gradient(145deg, hsl(0 0% 12% / 0.95), hsl(351 20% 14% / 0.95))",
-                boxShadow: "var(--shadow-elegant), inset 0 1px 0 hsl(351 33% 70% / 0.18)",
+                background:
+                  "linear-gradient(135deg, #2a2a2a 0%, #141414 38%, #0a0a0a 70%, #1c1c1c 100%)",
+                boxShadow:
+                  "0 30px 60px -25px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.04), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(0,0,0,0.6)",
               }}
             >
-              {/* Glassmorphism light sweep */}
+              {/* brushed metal grain */}
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-overlay"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(115deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 3px)",
+                }}
+              />
+              {/* radial sheen */}
+              <div
+                className="pointer-events-none absolute -inset-1/4"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at 20% 0%, rgba(255,255,255,0.18), transparent 45%), radial-gradient(ellipse at 100% 100%, rgba(180,140,90,0.18), transparent 50%)",
+                }}
+              />
+
+              {/* light sweep */}
               <motion.div
                 initial={{ x: "-130%" }}
                 animate={{ x: "130%" }}
@@ -83,42 +103,94 @@ export const Hero = () => {
                 className="pointer-events-none absolute inset-y-0 w-2/3 -skew-x-12"
                 style={{
                   background:
-                    "linear-gradient(90deg, transparent 0%, hsl(35 35% 93% / 0.06) 30%, hsl(351 33% 80% / 0.22) 50%, hsl(35 35% 93% / 0.06) 70%, transparent 100%)",
+                    "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 30%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.04) 70%, transparent 100%)",
                   filter: "blur(2px)",
                 }}
               />
 
-              <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] tracking-[0.3em] text-primary/70 uppercase font-light">
-                <span>{"\u200B"}</span>
-                <span>{"\u200B"}</span>
+              {/* top row: brand + status */}
+              <div className="absolute top-3 left-4 right-4 flex items-center justify-between z-10">
+                <img
+                  src={hbLogo}
+                  alt="HB+"
+                  className="h-5 md:h-6 w-auto object-contain opacity-90"
+                  style={{ filter: "brightness(0) invert(1) drop-shadow(0 1px 0 rgba(0,0,0,0.5))" }}
+                />
+                <span
+                  className="text-[8px] md:text-[9px] tracking-[0.35em] uppercase font-light"
+                  style={{
+                    background: "linear-gradient(180deg, #f3e0bf 0%, #b8895a 100%)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Reserve
+                </span>
               </div>
-              <p className="font-serif text-2xl md:text-4xl leading-tight text-cream-foreground">
-                <motion.span
-                  className="block text-foreground/90"
-                  initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ duration: 1.2, delay: 3.2, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  This Mother's Day,
-                </motion.span>
-                <motion.span
-                  className="block italic text-rose-gold"
-                  initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ duration: 1.4, delay: 3.9, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  Gift Her
-                </motion.span>
-                <motion.span
-                  className="block text-foreground/90"
-                  initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ duration: 1.4, delay: 4.6, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  Energy & Strength
-                </motion.span>
-              </p>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+
+              {/* center embossed text */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+                <p className="font-serif leading-tight">
+                  <motion.span
+                    className="block text-[11px] md:text-xs tracking-[0.45em] uppercase font-light mb-2"
+                    style={{ color: "rgba(243,224,191,0.55)" }}
+                    initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 1.2, delay: 3.2, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    This Mother's Day
+                  </motion.span>
+                  <motion.span
+                    className="block italic text-3xl md:text-5xl"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #fbeccb 0%, #d8ad75 45%, #8a5a32 100%)",
+                      WebkitBackgroundClip: "text",
+                      backgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      textShadow: "0 1px 0 rgba(0,0,0,0.4)",
+                    }}
+                    initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 1.4, delay: 3.9, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    Gift Her
+                  </motion.span>
+                  <motion.span
+                    className="block text-base md:text-xl font-light tracking-wide mt-1"
+                    style={{ color: "rgba(243,224,191,0.85)" }}
+                    initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 1.4, delay: 4.6, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    Energy & Strength
+                  </motion.span>
+                </p>
+              </div>
+
+              {/* bottom row: chip-style detail + member */}
+              <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between z-10">
+                <div
+                  className="h-5 w-7 md:h-6 md:w-9 rounded-[3px] border border-white/20"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #d4b274 0%, #8a6432 50%, #d4b274 100%)",
+                    boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)",
+                  }}
+                />
+                <div className="text-right">
+                  <div className="text-[7px] md:text-[8px] tracking-[0.3em] uppercase text-white/40 font-light">
+                    Member Since
+                  </div>
+                  <div
+                    className="text-[10px] md:text-xs tracking-[0.25em] font-light"
+                    style={{ color: "rgba(243,224,191,0.8)" }}
+                  >
+                    05 / 26
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 
