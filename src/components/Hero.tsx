@@ -4,7 +4,7 @@ import { FloralOrnament } from "./FloralOrnament";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-48 md:pt-56 pb-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-48 md:pt-56 pb-8">
       {/* Ambient lights */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px] animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-secondary/5 blur-[140px] animate-pulse-glow" style={{ animationDelay: "2s" }} />
