@@ -116,7 +116,7 @@ export const Packs = () => {
         {/* CTA */}
         <div className="mt-10 text-center">
           <motion.a
-            href="https://wa.me/917605964666"
+            href="https://wa.me/917605964666?text=Hey%21%20I%E2%80%99m%20looking%20for%20the%20Mother%E2%80%99s%20Day%20Wellness%20Card.%0AWould%20love%20to%20know%20more%20about%20the%20offer%20and%20how%20to%20get%20started."
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
