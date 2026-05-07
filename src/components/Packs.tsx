@@ -124,7 +124,7 @@ export const Packs = () => {
             className="btn-luxe inline-flex items-center gap-3 px-10 py-4 rounded-full font-serif text-lg tracking-[0.2em] uppercase"
           >
             <Gift className="w-5 h-5" strokeWidth={1.5} />
-            <span>Gift Wellness</span>
+            <span>Start Her Journey</span>
           </motion.a>
           <p className="mt-5 text-xs tracking-[0.3em] uppercase text-muted-foreground/70 font-light">
             Celebrate her. Support her. Strengthen her.
