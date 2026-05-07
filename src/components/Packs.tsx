@@ -10,7 +10,7 @@ const inclusions = [
 
 export const Packs = () => {
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative pt-32 pb-12 px-6 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full" />
 
       <div className="relative max-w-3xl mx-auto">
