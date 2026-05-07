@@ -25,7 +25,7 @@ export const Details = () => {
           transition={{ duration: 0.8 }}
           className="text-xs tracking-[0.4em] uppercase text-primary/70 text-center mb-10 font-light"
         >
-          The Fine Details
+          T&C
         </motion.h3>
 
         <div className="grid md:grid-cols-2 gap-5">
