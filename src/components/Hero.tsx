@@ -30,8 +30,8 @@ export const Hero = () => {
       </motion.div>
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
-        {/* Card reveal animation */}
-        <div className="relative mb-12 [perspective:2200px]">
+        {/* Card reveal animation — extra top margin equals lift distance so card never overlaps header */}
+        <div className="relative mb-12 mt-[140px] md:mt-[200px] [perspective:2200px]">
           <motion.div
             initial={{ opacity: 0, scale: 0.86, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
