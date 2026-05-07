@@ -64,8 +64,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        serif: ["'Cormorant Garamond'", "serif"],
-        sans: ["'Inter'", "sans-serif"],
+        serif: ["'The Seasons'", "'Cormorant Garamond'", "serif"],
+        display: ["'The Seasons'", "'Cormorant Garamond'", "serif"],
+        sans: ["'Gilroy'", "'Inter'", "sans-serif"],
+        body: ["'Gilroy'", "'Inter'", "sans-serif"],
       },
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },

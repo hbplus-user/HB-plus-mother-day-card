@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/the-seasons');
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 
 @tailwind base;
 @tailwind components;
@@ -6,61 +7,57 @@
 
 @layer base {
   :root {
-    /* HB+ site palette
-       cream bg #f5f2e9, ink #1a1a1a, rust accent #b54a2b, soft cream card #faf7f0
-    */
+    /* Premium dark palette — onyx with silver/champagne accents */
+    --background: 0 0% 4%;            /* near black */
+    --foreground: 40 18% 92%;         /* warm off-white */
 
-    --background: 42 33% 94%;        /* #f5f2e9 */
-    --foreground: 0 0% 10%;          /* #1a1a1a */
+    --card: 0 0% 7%;
+    --card-foreground: 40 18% 92%;
 
-    --card: 40 40% 97%;              /* near white cream */
-    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 18% 92%;
 
-    --popover: 40 40% 97%;
-    --popover-foreground: 0 0% 10%;
+    /* Primary — silver/champagne */
+    --primary: 40 22% 78%;
+    --primary-foreground: 0 0% 6%;
 
-    /* Primary — Rust */
-    --primary: 14 62% 44%;           /* #b54a2b-ish */
-    --primary-foreground: 42 33% 96%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 40 18% 92%;
 
-    /* Secondary — soft cream */
-    --secondary: 40 30% 90%;
-    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 8% 65%;
 
-    --muted: 40 25% 88%;
-    --muted-foreground: 0 0% 35%;
-
-    --accent: 14 62% 44%;
-    --accent-foreground: 42 33% 96%;
+    --accent: 38 28% 70%;
+    --accent-foreground: 0 0% 6%;
 
     --destructive: 0 70% 45%;
-    --destructive-foreground: 42 33% 96%;
+    --destructive-foreground: 40 18% 92%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 14 62% 44%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 40 22% 78%;
 
-    /* Brand tokens (kept names for backward compatibility) */
-    --cream: 42 33% 94%;
-    --cream-soft: 40 40% 97%;
-    --rose: 14 62% 44%;
-    --rose-gold: 14 62% 44%;
-    --olive: 0 0% 35%;
-    --deep-brown: 0 0% 10%;
+    /* Brand tokens */
+    --cream: 40 18% 92%;
+    --cream-soft: 40 22% 78%;
+    --rose: 38 28% 70%;
+    --rose-gold: 38 32% 65%;
+    --olive: 40 8% 65%;
+    --deep-brown: 0 0% 4%;
 
     --radius: 1rem;
 
     /* Gradients */
-    --gradient-bg: radial-gradient(ellipse at top, hsl(40 40% 97% / 0.9), transparent 55%), radial-gradient(ellipse at bottom, hsl(42 33% 90% / 0.7), transparent 60%), hsl(42 33% 94%);
-    --gradient-rose-gold: linear-gradient(135deg, hsl(14 62% 50%), hsl(14 62% 38%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9), hsl(40 40% 97% / 0.7));
-    --gradient-text: linear-gradient(135deg, hsl(0 0% 10%), hsl(14 62% 44%));
-    --gradient-glow: radial-gradient(circle, hsl(14 62% 44% / 0.18), transparent 70%);
+    --gradient-bg: radial-gradient(ellipse at top, hsl(0 0% 10% / 0.9), transparent 55%), radial-gradient(ellipse at bottom, hsl(0 0% 6% / 0.9), transparent 60%), hsl(0 0% 3%);
+    --gradient-rose-gold: linear-gradient(135deg, hsl(40 30% 88%), hsl(38 28% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 9% / 0.85), hsl(0 0% 5% / 0.7));
+    --gradient-text: linear-gradient(180deg, hsl(40 22% 95%) 0%, hsl(40 18% 70%) 50%, hsl(40 12% 45%) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(40 22% 78% / 0.18), transparent 70%);
 
     /* Shadows */
-    --shadow-elegant: 0 25px 80px -20px hsl(0 0% 0% / 0.18);
-    --shadow-glow: 0 0 60px hsl(14 62% 44% / 0.18);
-    --shadow-card: 0 30px 60px -30px hsl(0 0% 0% / 0.2);
+    --shadow-elegant: 0 25px 80px -20px hsl(0 0% 0% / 0.85);
+    --shadow-glow: 0 0 60px hsl(40 22% 78% / 0.18);
+    --shadow-card: 0 30px 60px -30px hsl(0 0% 0% / 0.95);
 
     --transition-luxe: cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -72,11 +69,12 @@
   body {
     @apply bg-background text-foreground;
     background: var(--gradient-bg);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Gilroy', 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  .font-serif { font-family: 'Cormorant Garamond', serif; }
+  .font-serif { font-family: 'The Seasons', 'Cormorant Garamond', serif; letter-spacing: 0.01em; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'The Seasons', 'Cormorant Garamond', serif; font-weight: 400; }
 }
 
 @layer components {
@@ -84,14 +82,14 @@
     background: var(--gradient-card);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsl(0 0% 0% / 0.08);
+    border: 1px solid hsl(40 18% 92% / 0.06);
   }
 
   .glass-hover {
     transition: all 0.6s var(--transition-luxe);
   }
   .glass-hover:hover {
-    border-color: hsl(14 62% 44% / 0.4);
+    border-color: hsl(40 22% 78% / 0.4);
     transform: translateY(-6px);
     box-shadow: var(--shadow-elegant);
   }
@@ -112,35 +110,86 @@
 
   .btn-luxe {
     position: relative;
-    background: linear-gradient(135deg, hsl(14 62% 48%), hsl(14 62% 40%));
-    color: hsl(42 33% 96%);
-    border: 1px solid hsl(14 62% 38% / 0.6);
+    background: linear-gradient(135deg, hsl(40 25% 85%), hsl(38 22% 65%));
+    color: hsl(0 0% 6%);
+    border: 1px solid hsl(40 22% 78% / 0.5);
     transition: all 0.5s var(--transition-luxe);
     box-shadow:
-      inset 0 1px 0 hsl(0 0% 100% / 0.18),
-      inset 0 -1px 0 hsl(0 0% 0% / 0.15);
+      inset 0 1px 0 hsl(0 0% 100% / 0.35),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.25),
+      0 10px 30px -15px hsl(40 22% 78% / 0.4);
   }
   .btn-luxe::after {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(180deg, hsl(0 0% 100% / 0.15), transparent 55%);
+    background: linear-gradient(180deg, hsl(0 0% 100% / 0.18), transparent 55%);
     pointer-events: none;
   }
   .btn-luxe:hover {
     transform: translateY(-2px) scale(1.02);
-    border-color: hsl(14 62% 30%);
-    box-shadow: 0 10px 30px -10px hsl(14 62% 44% / 0.45);
+    box-shadow: 0 14px 40px -10px hsl(40 22% 78% / 0.55);
   }
-  .btn-luxe:hover::before { opacity: 1; }
 
   .particle {
     position: absolute;
     border-radius: 9999px;
-    background: hsl(14 62% 44% / 0.35);
+    background: hsl(40 22% 78% / 0.45);
     pointer-events: none;
     filter: blur(1px);
+  }
+
+  /* ===== Glowing card with rotating gradient border ===== */
+  .glow-card {
+    position: relative;
+    border-radius: 1.25rem;
+    background:
+      radial-gradient(ellipse 80% 60% at 30% 0%, hsl(40 22% 78% / 0.08), transparent 60%),
+      linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .glow-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      transparent 0deg,
+      hsl(40 30% 92% / 0.9) 60deg,
+      hsl(38 28% 70% / 0.6) 110deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: rotate-border 6s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .glow-card::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(1.25rem - 1px);
+    background:
+      radial-gradient(ellipse 70% 50% at 25% -10%, hsl(40 22% 78% / 0.10), transparent 65%),
+      linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
+    z-index: 0;
+  }
+  .glow-card > * { position: relative; z-index: 2; }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  @keyframes rotate-border {
+    to { --angle: 360deg; }
   }
 }
 
@@ -155,4 +204,6 @@
     pointer-events: none;
     z-index: 0;
   }
+  .font-display { font-family: 'The Seasons', 'Cormorant Garamond', serif; }
+  .font-body { font-family: 'Gilroy', 'Inter', sans-serif; }
 }
