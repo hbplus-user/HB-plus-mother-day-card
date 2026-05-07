@@ -36,7 +36,7 @@ export const Details = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.9, delay: i * 0.15 }}
-              className="glass glass-hover rounded-xl p-6 flex items-center gap-5"
+              className="glow-card glass-hover p-6 flex items-center gap-5"
             >
               <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 border border-primary/30 text-primary">
                 <d.icon className="w-5 h-5" strokeWidth={1.2} />

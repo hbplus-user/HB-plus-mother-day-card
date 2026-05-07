@@ -40,7 +40,7 @@ export const Packs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="relative glass rounded-3xl p-8 md:p-14 overflow-hidden"
+          className="glow-card relative p-8 md:p-14 overflow-hidden"
           style={{ boxShadow: "var(--shadow-card)" }}
         >
           {/* Floral ornaments in corners */}
@@ -103,7 +103,7 @@ export const Packs = () => {
           ].map((line) => (
             <div
               key={line}
-              className="glass rounded-2xl px-5 py-4 flex items-center gap-3"
+              className="glow-card px-5 py-4 flex items-center gap-3"
             >
               <span className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
                 <Calendar className="w-4 h-4 text-primary" strokeWidth={1.4} />
