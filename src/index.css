@@ -116,10 +116,16 @@
 
   .btn-luxe {
     position: relative;
-    background: var(--gradient-rose-gold);
+    background: linear-gradient(135deg, hsl(14 64% 38% / 0.28), hsl(17 55% 55% / 0.18));
     color: hsl(var(--cream));
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid hsl(32 41% 87% / 0.18);
     transition: all 0.5s var(--transition-luxe);
-    box-shadow: 0 10px 40px -10px hsl(14 64% 38% / 0.5);
+    box-shadow:
+      0 10px 40px -10px hsl(14 64% 20% / 0.55),
+      inset 0 1px 0 hsl(32 41% 87% / 0.18),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.25);
   }
   .btn-luxe::before {
     content: '';
@@ -127,14 +133,25 @@
     inset: -2px;
     border-radius: inherit;
     background: var(--gradient-rose-gold);
-    filter: blur(20px);
-    opacity: 0.5;
+    filter: blur(24px);
+    opacity: 0.35;
     z-index: -1;
     transition: opacity 0.5s var(--transition-luxe);
   }
+  .btn-luxe::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, hsl(32 41% 87% / 0.18), transparent 55%);
+    pointer-events: none;
+  }
   .btn-luxe:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 20px 60px -10px hsl(14 64% 38% / 0.7);
+    border-color: hsl(32 41% 87% / 0.3);
+    box-shadow:
+      0 20px 60px -10px hsl(14 64% 38% / 0.55),
+      inset 0 1px 0 hsl(32 41% 87% / 0.25);
   }
   .btn-luxe:hover::before { opacity: 1; }
 
