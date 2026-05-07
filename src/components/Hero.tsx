@@ -94,8 +94,8 @@ export const Hero = () => {
               </div>
               <p className="font-serif text-2xl md:text-4xl leading-tight text-cream-foreground">
                 <span className="block text-foreground/90">This Mother's Day,</span>
-                <span className="block italic text-rose-gold">Gift Energy & Strength</span>
-                <span className="block text-foreground/90">{"\u200B"}</span>
+                <span className="block italic text-rose-gold">Gift Her</span>
+                <span className="block text-foreground/90">{"\u200B"}Energy & Strength</span>
               </p>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
             </motion.div>
