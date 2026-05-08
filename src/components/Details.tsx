@@ -4,8 +4,8 @@ import { Clock, CalendarCheck } from "lucide-react";
 const details = [
   {
     icon: Clock,
-    title: "Activation Window",
-    text: "Must be activated within 2 weeks of purchase",
+    title: "​",
+    text: "This Mother’s Day, give her a reason to slow down and care for herself too.",
   },
   {
     icon: CalendarCheck,
@@ -25,7 +25,7 @@ export const Details = () => {
           transition={{ duration: 0.8 }}
           className="text-xs tracking-[0.4em] uppercase text-primary/70 text-center mb-10 font-light"
         >
-          Things to Keep in Mind
+          ​Designed With Care
         </motion.h3>
 
         <div className="grid md:grid-cols-2 gap-5">
@@ -42,7 +42,7 @@ export const Details = () => {
                 <d.icon className="w-5 h-5" strokeWidth={1.2} />
               </div>
               <div>
-                <p className="font-serif text-lg text-foreground">{d.title}</p>
+                <p className="font-serif text-foreground text-sm text-center font-thin">{d.title}</p>
                 <p className="text-sm text-muted-foreground font-light mt-0.5">{d.text}</p>
               </div>
             </motion.div>
