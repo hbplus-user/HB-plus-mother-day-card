@@ -41,12 +41,12 @@ export const CTA = () => {
             whileTap={{ scale: 0.98 }}
             className="btn-luxe inline-flex items-center gap-3 mt-12 px-12 py-5 rounded-full font-serif text-xl tracking-wide"
           >
-            <span className="text-sm">Start Her Journey</span>
+            <span className="text-sm">Gift The Experience</span>
             <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
           </motion.a>
 
           <p className="mt-8 text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 font-light">
-            CONTINUES TO WHATSAPP.
+            You’re One Step Away From Her Wellness Journey
           </p>
         </motion.div>
       </div>
