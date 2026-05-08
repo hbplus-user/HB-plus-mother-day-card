@@ -27,10 +27,10 @@ export const CTA = () => {
             {"\u200B"}
           </span>
           <h2 className="font-serif text-4xl md:text-6xl mt-5 leading-tight">
-            <span className="text-foreground/90 text-4xl font-extralight">Thoughtfully designed sessions, to help her reconnect with herself.</span>
+            <span className="text-foreground/90 font-extralight text-3xl">Because the women who care for everyone else<br />deserve care too.</span>
           </h2>
           <p className="mt-6 text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
-            Gift The HB+ Experience
+            More than a gift. A feeling.
           </p>
 
           <motion.a
