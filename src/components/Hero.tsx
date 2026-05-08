@@ -193,7 +193,7 @@ export const Hero = () => {
           className="mt-8 flex items-center gap-3 text-xs tracking-[0.4em] text-primary/70 uppercase font-light"
         >
           <span className="h-px w-8 bg-primary/40" />
-          <span>Scroll to explore</span>
+          <span>A Gift Designed With Care</span>
           <span className="h-px w-8 bg-primary/40" />
         </motion.div>
       </div>
