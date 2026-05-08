@@ -7,11 +7,6 @@ const details = [
     title: "​",
     text: "This Mother’s Day, give her a reason to slow down and care for herself too.",
   },
-  {
-    icon: CalendarCheck,
-    title: "Validity",
-    text: "Valid for 21 days from date of redemption",
-  },
 ];
 
 export const Details = () => {
