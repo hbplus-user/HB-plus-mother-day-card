@@ -23,13 +23,12 @@ export const CTA = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <span className="text-xs tracking-[0.4em] uppercase text-primary/70 font-light">
-            {"\u200B"}
-          </span>
-          <h2 className="font-serif text-4xl md:text-6xl mt-5 leading-tight">
-            <span className="text-foreground/90 font-extralight text-3xl">Because the women who care for everyone else<br />deserve care too.</span>
+          <h2 className="font-serif leading-snug">
+            <span className="block text-foreground/90 font-extralight text-2xl md:text-3xl max-w-xl mx-auto">
+              Because the women who care for everyone else deserve care too.
+            </span>
           </h2>
-          <p className="mt-6 text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
+          <p className="mt-6 text-muted-foreground font-light tracking-wide italic">
             More than a gift. A feeling.
           </p>
 

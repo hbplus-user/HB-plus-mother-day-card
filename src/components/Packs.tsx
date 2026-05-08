@@ -50,15 +50,16 @@ export const Packs = () => {
           </div>
 
           {/* Header */}
-          <div className="relative text-center">
+          <div className="relative text-center flex flex-col items-center">
             <div className="mx-auto w-14 h-14 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center backdrop-blur">
               <Flower className="w-6 h-6 text-primary" strokeWidth={1.3} />
             </div>
-            <h3 className="font-serif text-3xl md:text-4xl mt-5 text-gradient">{"\u200B"}</h3>
-            <p className="mt-1 md:text-xs tracking-[0.5em] uppercase text-primary/80 font-light text-xs">
-              Small moments of movement and care<br />that make a big difference.
+            <p className="mt-5 text-xs md:text-sm tracking-[0.25em] uppercase text-primary/80 font-light leading-loose max-w-sm">
+              Small moments of movement and care
+              <br />
+              that make a big difference.
             </p>
-            <div className="mt-6 mx-auto flex items-center justify-center gap-3 text-primary/50">
+            <div className="mt-6 flex items-center justify-center gap-3 text-primary/50">
               <span className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50" />
               <span className="text-xs">✦</span>
               <span className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50" />
