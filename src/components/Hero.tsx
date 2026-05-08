@@ -193,7 +193,7 @@ export const Hero = () => {
           transition={{ duration: 1.2, delay: 4.4 }}
           className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-4 md:mt-6 whitespace-pre-line"
         >
-          <span>This Mother’s Day, give her a reason to slow down and care for herself too.</span>
+          <span>Because caring for her body shouldn't come last anymore.</span>
         </motion.p>
 
         <motion.div
