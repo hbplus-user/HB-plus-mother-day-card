@@ -5,7 +5,7 @@ import { FloralOrnament } from "./FloralOrnament";
 const inclusions = [
   { icon: Dumbbell, label: "4 Strength Sessions\n(35 mins)" },
   { icon: Flower2, label: "2 Yoga Sessions\n(45 mins)" },
-  { icon: Soup, label: "1 Nutrition Assessment" },
+  { icon: Soup, label: "1 Nutrition Assessment\n(35 mins consultation)" },
 ];
 
 export const Packs = () => {
