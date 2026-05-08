@@ -16,7 +16,7 @@ const details = [
 
 export const Details = () => {
   return (
-    <section className="relative pt-24 pb-10 px-6">
+    <section className="relative pt-4 pb-10 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
