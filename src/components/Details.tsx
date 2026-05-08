@@ -5,7 +5,7 @@ const details = [
   {
     icon: Clock,
     title: "​",
-    text: "This Mother’s Day, give her a reason to slow down and care for herself too.",
+    text: "Because caring for her body shouldn't come last anymore.",
   },
 ];
 
