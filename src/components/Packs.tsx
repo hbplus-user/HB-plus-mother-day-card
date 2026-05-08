@@ -55,8 +55,8 @@ export const Packs = () => {
               <Flower className="w-6 h-6 text-primary" strokeWidth={1.3} />
             </div>
             <h3 className="font-serif text-3xl md:text-4xl mt-5 text-gradient">{"\u200B"}</h3>
-            <p className="mt-1 text-[11px] md:text-xs tracking-[0.5em] uppercase text-primary/80 font-light">
-              Wellness Experience
+            <p className="mt-1 md:text-xs tracking-[0.5em] uppercase text-primary/80 font-light text-xs">
+              Small moments of movement and care<br />that make a big difference.
             </p>
             <div className="mt-6 mx-auto flex items-center justify-center gap-3 text-primary/50">
               <span className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50" />
