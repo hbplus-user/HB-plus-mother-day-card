@@ -54,7 +54,7 @@ export const Packs = () => {
             <div className="mx-auto w-14 h-14 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center backdrop-blur">
               <Flower className="w-6 h-6 text-primary" strokeWidth={1.3} />
             </div>
-            <p className="mt-5 text-[10px] md:text-sm tracking-[0.15em] md:tracking-[0.25em] uppercase text-primary/80 font-light leading-loose max-w-md whitespace-nowrap">
+            <p className="mt-5 text-[10px] md:text-sm tracking-[0.15em] md:tracking-[0.25em] uppercase text-primary/80 leading-loose max-w-md whitespace-nowrap font-semibold">
               Small moments of movement and care
               <br />
               that make a big difference.
