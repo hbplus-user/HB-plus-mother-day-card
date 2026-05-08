@@ -87,7 +87,7 @@ export const Packs = () => {
           </ul>
 
           <p className="relative mt-8 text-center italic text-xs md:text-sm text-muted-foreground/80 font-light">
-            Offer inclusions may vary slightly
+            Experiences may be personalised
             <br />
             based on membership type.
           </p>
