@@ -38,14 +38,6 @@ export const Packs = () => {
           className="glow-card relative p-8 md:p-14 overflow-hidden"
           style={{ boxShadow: "var(--shadow-card)" }}
         >
-          {/* Floral ornaments in corners */}
-          <div className="pointer-events-none absolute -top-8 -right-8 w-48 text-primary/30 rotate-12">
-            <FloralOrnament />
-          </div>
-          <div className="pointer-events-none absolute -bottom-10 -left-10 w-52 text-secondary/25 -rotate-12">
-            <FloralOrnament />
-          </div>
-
           {/* Header */}
           <div className="relative text-center flex flex-col items-center">
             <div className="mx-auto w-14 h-14 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center backdrop-blur">
