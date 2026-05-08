@@ -35,7 +35,8 @@ export const Hero = () => {
         <div className="relative mb-12 mt-[140px] md:mt-[200px] [perspective:2200px]">
           <motion.div
             initial={{ opacity: 0, scale: 0.86, y: 24 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
             className="relative w-[320px] md:w-[440px] h-[200px] md:h-[260px] rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/5 [transform-style:preserve-3d]"
             style={{ boxShadow: "var(--shadow-card)" }}
@@ -43,7 +44,8 @@ export const Hero = () => {
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-6 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <motion.div
               initial={{ scaleY: 1 }}
-              animate={{ scaleY: 0 }}
+              whileInView={{ scaleY: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 1.2, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformOrigin: "top center" }}
               className="absolute left-1/2 inset-y-0 -translate-x-1/2 w-6 bg-gradient-to-b from-transparent via-primary/50 to-transparent"
@@ -52,7 +54,8 @@ export const Hero = () => {
             {/* Lid opening */}
             <motion.div
               initial={{ rotateX: 0, opacity: 1 }}
-              animate={{ rotateX: -135, opacity: 0.85 }}
+              whileInView={{ rotateX: -135, opacity: 0.85 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 2, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
               style={{
                 transformOrigin: "top center",
@@ -68,7 +71,8 @@ export const Hero = () => {
             {/* Card pops out — premium metal card */}
             <motion.div
               initial={{ y: 0, opacity: 0, rotateX: -10, scale: 0.92 }}
-              animate={{ y: -180, opacity: 1, rotateX: 0, scale: 1 }}
+              whileInView={{ y: -180, opacity: 1, rotateX: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 3, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
               className="absolute inset-x-6 top-6 bottom-6 rounded-xl overflow-hidden [transform-style:preserve-3d] z-30 border border-white/10"
               style={{
@@ -98,7 +102,8 @@ export const Hero = () => {
               {/* light sweep */}
               <motion.div
                 initial={{ x: "-130%" }}
-                animate={{ x: "130%" }}
+                whileInView={{ x: "130%" }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 2.4, delay: 4.2, ease: [0.22, 1, 0.36, 1] }}
                 className="pointer-events-none absolute inset-y-0 w-2/3 -skew-x-12"
                 style={{
@@ -125,7 +130,8 @@ export const Hero = () => {
                     className="block text-[11px] md:text-xs tracking-[0.45em] uppercase font-light mb-2"
                     style={{ color: "rgba(243,224,191,0.55)" }}
                     initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
-                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 1.2, delay: 3.2, ease: [0.22, 1, 0.36, 1] }}
                   >
                     This Mother's Day
@@ -141,7 +147,8 @@ export const Hero = () => {
                       textShadow: "0 1px 0 rgba(0,0,0,0.4)",
                     }}
                     initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
-                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 1.4, delay: 3.9, ease: [0.22, 1, 0.36, 1] }}
                   >
                     Gift Her
@@ -150,7 +157,8 @@ export const Hero = () => {
                     className="block md:text-xl font-light tracking-wide mt-1 text-2xl"
                     style={{ color: "rgba(243,224,191,0.85)" }}
                     initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
-                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 1.4, delay: 4.6, ease: [0.22, 1, 0.36, 1] }}
                   >
                     Wellness
@@ -164,14 +172,16 @@ export const Hero = () => {
           {/* Glow burst on open */}
           <motion.div
             initial={{ opacity: 0, scale: 0.6 }}
-            animate={{ opacity: [0, 0.9, 0.5], scale: [0.6, 1.2, 1] }}
-            transition={{ duration: 2.4, delay: 1.8, ease: [0.22, 1, 0.36, 1], times: [0, 0.5, 1] }}
+            whileInView={{ opacity: 0.6, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 2.4, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
             className="absolute top-1/4 left-1/2 -translate-x-1/2 w-2/3 h-20 bg-primary/40 blur-3xl pointer-events-none"
           />
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
+            whileInView={{ opacity: 0.6 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 2.4, delay: 3 }}
             className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-primary/30 blur-3xl"
           />
