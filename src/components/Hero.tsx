@@ -183,7 +183,7 @@ export const Hero = () => {
           transition={{ duration: 1.2, delay: 4.4 }}
           className="text-base md:text-lg text-muted-foreground font-light tracking-wide mt-24 md:mt-32"
         >
-          A wellness experience made just for her.
+          Because caring for herself<br />shouldn’t come last anymore.
         </motion.p>
 
         <motion.div
