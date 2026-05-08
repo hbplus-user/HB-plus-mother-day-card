@@ -5,7 +5,7 @@ const details = [
   {
     icon: Clock,
     title: "​",
-    text: "Because caring for her body shouldn't come last anymore.",
+    text: "Caring for her body shouldn't \ncome last anymore.",
   },
 ];
 
