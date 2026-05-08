@@ -9,10 +9,10 @@ const socials = [
 
 export const Footer = () => (
   <footer className="relative py-12 px-6 border-t border-white/5">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div className="max-w-6xl mx-auto flex flex-col items-center gap-8 md:flex-row md:justify-between md:gap-6">
       <img src={hbLogo} alt="HB+ logo" className="h-8 w-auto object-contain" />
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 order-last md:order-none">
         {socials.map(({ icon: Icon, href, label }) => (
           <a
             key={label}
@@ -27,8 +27,10 @@ export const Footer = () => (
         ))}
       </div>
 
-      <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/60 font-light text-center md:text-right whitespace-pre-line">
-        Designed to be started within 14 days.{"\n\n"}A 21-day guided wellness experience.
+      <p className="text-[11px] leading-relaxed tracking-[0.2em] uppercase text-muted-foreground/60 font-light text-center md:text-right max-w-xs">
+        Designed to be started within 14 days.
+        <br />
+        A 21-day guided wellness experience.
       </p>
     </div>
   </footer>
