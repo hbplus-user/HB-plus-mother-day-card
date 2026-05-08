@@ -31,19 +31,21 @@ export const Details = () => {
         <div className="grid md:grid-cols-2 gap-5">
           {details.map((d, i) => (
             <motion.div
-              key={d.title}
+              key={d.title || i}
               initial={{ opacity: 0, x: i === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.9, delay: i * 0.15 }}
-              className="glow-card glass-hover p-6 flex items-center gap-5"
+              className="glow-card glass-hover p-6 flex flex-col items-center text-center gap-4"
             >
               <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-primary/10 border border-primary/30 text-primary">
                 <d.icon className="w-5 h-5" strokeWidth={1.2} />
               </div>
-              <div>
-                <p className="font-serif text-foreground text-sm text-center font-thin">{d.title}</p>
-                <p className="text-sm text-muted-foreground font-light mt-0.5">{d.text}</p>
+              <div className="space-y-1.5">
+                {d.title && d.title.trim() && (
+                  <p className="font-serif text-foreground text-sm font-thin tracking-wide">{d.title}</p>
+                )}
+                <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-xs mx-auto">{d.text}</p>
               </div>
             </motion.div>
           ))}
