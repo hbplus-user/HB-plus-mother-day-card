@@ -27,8 +27,8 @@ export const Footer = () => (
         ))}
       </div>
 
-      <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground/60 font-light">
-        Crafted with care for her
+      <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/60 font-light text-center md:text-right whitespace-pre-line">
+        Designed to be started within 14 days.{"\n\n"}A 21-day guided wellness experience.
       </p>
     </div>
   </footer>
