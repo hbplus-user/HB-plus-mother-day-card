@@ -27,10 +27,10 @@ export const CTA = () => {
             {"\u200B"}
           </span>
           <h2 className="font-serif text-4xl md:text-6xl mt-5 leading-tight">
-            <span className="text-foreground/90 text-4xl font-extralight">Thoughtfully designed sessions, to help her reconnect with herself.</span>
+            <span className="text-foreground/90 font-extralight text-3xl">Because the women who care for everyone else<br />deserve care too.</span>
           </h2>
           <p className="mt-6 text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
-            Gift The HB+ Experience
+            More than a gift. A feeling.
           </p>
 
           <motion.a
@@ -41,12 +41,12 @@ export const CTA = () => {
             whileTap={{ scale: 0.98 }}
             className="btn-luxe inline-flex items-center gap-3 mt-12 px-12 py-5 rounded-full font-serif text-xl tracking-wide"
           >
-            <span className="text-sm">Start Her Journey</span>
+            <span className="text-sm">Gift The Experience</span>
             <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
           </motion.a>
 
           <p className="mt-8 text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 font-light">
-            CONTINUES TO WHATSAPP.
+            You’re One Step Away From Her Wellness Journey
           </p>
         </motion.div>
       </div>
