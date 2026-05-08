@@ -21,9 +21,6 @@ export const Packs = () => {
           transition={{ duration: 1 }}
           className="text-center mb-10"
         >
-          <div className="mx-auto mb-5 w-8 text-primary/60">
-            <FloralOrnament />
-          </div>
           <span className="font-serif text-xs md:text-sm tracking-[0.5em] text-foreground/90 uppercase">
             ​
           </span>
