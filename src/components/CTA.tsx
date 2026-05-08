@@ -38,14 +38,19 @@ export const CTA = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
-            className="btn-luxe inline-flex items-center gap-3 mt-12 px-12 py-5 rounded-full font-serif text-xl tracking-wide"
+            className="btn-luxe inline-flex flex-col items-center gap-1 mt-12 px-10 py-5 rounded-full font-serif tracking-wide"
           >
-            <span className="text-sm whitespace-pre-line">Gift The Experience{"\n"}(You’re One Step Away From Her Wellness Journey)</span>
-            <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
+            <span className="inline-flex items-center gap-3 text-base md:text-lg tracking-[0.2em] uppercase">
+              Gift The Experience
+              <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
+            </span>
+            <span className="text-[10px] md:text-xs tracking-[0.25em] uppercase opacity-70 font-sans">
+              One step closer to her wellness
+            </span>
           </motion.a>
 
-          <p className="mt-8 text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 font-light">
-            You’re One Step Away From Her Wellness Journey
+          <p className="mt-6 text-muted-foreground/70 font-light italic text-sm">
+            A small gift that can make her feel seen, again.
           </p>
         </motion.div>
       </div>
