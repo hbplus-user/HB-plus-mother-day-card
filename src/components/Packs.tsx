@@ -28,7 +28,7 @@ export const Packs = () => {
             ​
           </span>
           <p className="mt-5 text-sm md:text-base text-muted-foreground font-light leading-relaxed max-w-md mx-auto whitespace-pre-line">
-            Thoughtfully designed to help her{"\n"}feel stronger, lighter, and more like herself again.
+            Thoughtfully designed to help her{"\n"}grow stronger, feel lighter - basically more like herself again.
           </p>
         </motion.div>
 
