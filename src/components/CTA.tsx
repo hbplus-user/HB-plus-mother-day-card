@@ -4,7 +4,7 @@ import { FloralOrnament } from "./FloralOrnament";
 
 export const CTA = () => {
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative pt-8 pb-32 px-6 overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[700px] h-[700px] rounded-full bg-primary/10 blur-[140px] animate-pulse-glow" />
       </div>
