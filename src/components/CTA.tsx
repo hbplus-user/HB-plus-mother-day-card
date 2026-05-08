@@ -40,7 +40,7 @@ export const CTA = () => {
             whileTap={{ scale: 0.98 }}
             className="btn-luxe group inline-flex items-center gap-4 mt-12 px-8 md:px-12 py-4 md:py-5 rounded-full font-serif text-[11px] md:text-sm tracking-[0.3em] md:tracking-[0.35em] uppercase whitespace-nowrap"
           >
-            <span>Gift The Experience</span>
+            <span>Start Here</span>
             <span className="inline-flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full border border-foreground/20 transition-transform duration-500 group-hover:rotate-45">
               <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4" strokeWidth={1.5} />
             </span>
