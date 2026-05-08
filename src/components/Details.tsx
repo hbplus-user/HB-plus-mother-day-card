@@ -31,7 +31,7 @@ export const Details = () => {
         <div className="grid md:grid-cols-2 gap-5">
           {details.map((d, i) => (
             <motion.div
-              key={d.title || i}
+              key={i}
               initial={{ opacity: 0, x: i === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -42,9 +42,7 @@ export const Details = () => {
                 <d.icon className="w-5 h-5" strokeWidth={1.2} />
               </div>
               <div className="space-y-1.5">
-                {d.title && d.title.trim() && (
-                  <p className="font-serif text-foreground text-sm font-thin tracking-wide">{d.title}</p>
-                )}
+                <p className="font-serif text-foreground text-sm font-thin tracking-wide min-h-[1.25rem]">{d.title}</p>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-xs mx-auto">{d.text}</p>
               </div>
             </motion.div>
