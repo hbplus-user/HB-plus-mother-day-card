@@ -99,19 +99,7 @@ export const Hero = () => {
                 }}
               />
 
-              {/* light sweep */}
-              <motion.div
-                initial={{ x: "-130%" }}
-                whileInView={{ x: "130%" }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ duration: 2.4, delay: 4.2, ease: [0.22, 1, 0.36, 1] }}
-                className="pointer-events-none absolute inset-y-0 w-2/3 -skew-x-12"
-                style={{
-                  background:
-                    "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 30%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.04) 70%, transparent 100%)",
-                  filter: "blur(2px)",
-                }}
-              />
+              {/* inner moving light sweep removed as requested */}
 
               {/* top row: brand + status */}
               <div className="absolute top-3 left-4 right-4 flex items-center justify-between z-10">

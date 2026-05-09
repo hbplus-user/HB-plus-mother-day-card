@@ -64,7 +64,7 @@ export const Packs = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
-                className="glow-card flex items-center gap-4 px-6 py-4"
+                className="relative bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] rounded-2xl flex items-center gap-4 px-6 py-4"
               >
                 <span className="w-9 h-9 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
                   <item.icon className="w-4 h-4 text-primary" strokeWidth={1.4} />

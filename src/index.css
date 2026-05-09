@@ -204,7 +204,7 @@
         #fff 350deg,
         hsl(40 100% 70%) 355deg,
         transparent 360deg);
-    animation: rotate-border 4s linear infinite;
+    animation: rotate-border 12s linear infinite;
     z-index: 1;
     pointer-events: none;
   }

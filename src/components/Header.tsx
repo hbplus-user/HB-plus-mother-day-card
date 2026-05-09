@@ -10,7 +10,7 @@ export const Header = () => (
   >
     <div className="flex items-center gap-2">
       <div 
-        className="h-8 w-24 md:w-32 bg-gradient-to-b from-[#fbeccb] via-[#d8ad75] to-[#8a5a32]" 
+        className="h-8 w-24 md:w-32 bg-gradient-to-b from-[#f2eee3] via-[#d1c7b7] to-[#b3a890]" 
         style={{ 
           WebkitMaskImage: `url(${hbLogo})`,
           maskImage: `url(${hbLogo})`,
@@ -24,8 +24,6 @@ export const Header = () => (
         aria-label="HB+ logo"
       />
     </div>
-    <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-muted-foreground font-light">
-      {"\u200B"}
-    </span>
+
   </motion.header>
 );

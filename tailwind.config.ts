@@ -95,7 +95,7 @@ export default {
         "fade-up": "fade-up 1s cubic-bezier(0.22,1,0.36,1) both",
         "float": "float 8s ease-in-out infinite",
         "shimmer": "shimmer 4s linear infinite",
-        "pulse-glow": "pulse-glow 4s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 12s ease-in-out infinite",
       },
     },
   },
