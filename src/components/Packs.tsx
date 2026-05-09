@@ -22,7 +22,7 @@ export const Packs = () => {
           className="text-center mb-10"
         >
           <span className="font-serif text-xs md:text-sm tracking-[0.5em] text-foreground/90 uppercase">
-            ​
+
           </span>
           <p className="mt-5 text-sm md:text-base text-muted-foreground font-light leading-relaxed max-w-md mx-auto whitespace-pre-line">
             Thoughtfully designed to help her{"\n"}grow stronger, feel lighter - basically more like herself again.
@@ -86,7 +86,7 @@ export const Packs = () => {
         {/* CTA */}
         <div className="mt-10 text-center">
           <motion.a
-            href="https://pages.razorpay.com/pl_SmsT4cx1TF0I0k/view"
+            href="https://rzp.io/rzp/K6MKHE5r"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}

@@ -9,21 +9,17 @@ export const Header = () => (
     className="fixed top-0 inset-x-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between backdrop-blur-md bg-background/30 border-b border-white/5"
   >
     <div className="flex items-center gap-2">
-      <div 
-        className="h-8 w-24 md:w-32 bg-gradient-to-b from-[#f2eee3] via-[#d1c7b7] to-[#b3a890]" 
+      <img 
+        src={hbLogo} 
+        alt="HB+ logo" 
+        className="h-8 w-auto object-contain transition-all duration-300" 
         style={{ 
-          WebkitMaskImage: `url(${hbLogo})`,
-          maskImage: `url(${hbLogo})`,
-          WebkitMaskSize: "contain",
-          maskSize: "contain",
-          WebkitMaskRepeat: "no-repeat",
-          maskRepeat: "no-repeat",
-          WebkitMaskPosition: "center",
-          maskPosition: "center"
+          filter: "brightness(0) saturate(100%) invert(89%) sepia(11%) saturate(368%) hue-rotate(355deg) brightness(92%) contrast(86%) drop-shadow(0 0 10px rgba(212, 209, 193, 0.2))" 
         }}
-        aria-label="HB+ logo"
       />
     </div>
-
+    <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-muted-foreground font-light">
+      {"\u200B"}
+    </span>
   </motion.header>
 );

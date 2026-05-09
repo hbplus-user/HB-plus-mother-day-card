@@ -33,7 +33,7 @@ export const CTA = () => {
           </p>
 
           <motion.a
-            href="https://pages.razorpay.com/pl_SmsT4cx1TF0I0k/view"
+            href="https://rzp.io/rzp/K6MKHE5r"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
