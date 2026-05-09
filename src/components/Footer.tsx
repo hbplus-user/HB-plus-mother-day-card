@@ -1,5 +1,5 @@
 import { Instagram, Youtube, Linkedin } from "lucide-react";
-import hbLogo from "@/assets/image.png";
+import hbLogo from "@/assets/hb-plus-logo.png";
 
 const socials = [
   { icon: Instagram, href: "https://www.instagram.com/hopwith_hb/", label: "Instagram" },

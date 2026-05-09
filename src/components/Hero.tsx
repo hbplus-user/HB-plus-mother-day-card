@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Particles } from "./Particles";
 import { FloralOrnament } from "./FloralOrnament";
-import hbLogo from "@/assets/image.png";
+import hbLogo from "@/assets/hb-plus-logo.png";
 
 export const Hero = () => {
   return (
